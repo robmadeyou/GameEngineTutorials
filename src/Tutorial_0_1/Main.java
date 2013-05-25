@@ -37,7 +37,7 @@ public class Main {
 		 * view changes you must first set up the world. Remove the two forward slash lines ("//") on the line below
 		 * to set up the world and see what happens then!
 		 */
-		//Screen.setUpWorld();
+		Screen.setUpWorld();
 		/*
 		 * You should now be able to move around with the Arrow Keys.
 		 */

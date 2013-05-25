@@ -42,10 +42,9 @@ public class Main {
 		 * You should now be able to move around with the Arrow Keys.
 		 */
 		while(!Screen.isAskedToClose()){
-			if(Keyboard.isKeyDown(Key.E)){
-				EntityList.addEntity(new Enemy(Mouse.getX(), Mouse.getY(), 20, 40));
-			}
+			
 			Screen.update(60);
+			Screen.refresh();
 		}
 	}
 }

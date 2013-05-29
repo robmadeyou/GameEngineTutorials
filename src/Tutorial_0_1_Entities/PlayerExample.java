@@ -1,15 +1,11 @@
-package Tutorial_0_1;
+package Tutorial_0_1_Entities;
 
 import com.gmail.robmadeyou.Screen;
 import com.gmail.robmadeyou.Screen.GameType;
-import com.gmail.robmadeyou.Entity.Enemy;
 import com.gmail.robmadeyou.Entity.EntityList;
 import com.gmail.robmadeyou.Entity.Player;
-import com.gmail.robmadeyou.Input.Keyboard;
-import com.gmail.robmadeyou.Input.Keyboard.Key;
-import com.gmail.robmadeyou.Input.Mouse;
 
-public class Main {
+public class PlayerExample {
 	/*
 	 * Main method previously seen
 	 */
@@ -25,7 +21,7 @@ public class Main {
 		 * we are setting up the player dimensions. Initially there are very few things we actually set
 		 * everything else is stated later on. Things like movement, speed and jump height (there are more)
 		 */
-		Player player = new Player(40, 40, 20, 40);
+		Player player = new Player(40, 40, 32, 64);
 		/*
 		 * After creating the player entity we have to add it to the global list of entities. We do this by
 		 * using the class EntityList and the method addEntity, in the parameters of the method we name the entity we
@@ -45,5 +41,6 @@ public class Main {
 			Screen.update(60);
 			Screen.refresh();
 		}
+		Screen.destroy();
 	}
 }

@@ -1,4 +1,6 @@
-package Tutorial_0_0;
+package Tutorial_0_0_Basic_game_loop;
+
+import org.lwjgl.Sys;
 
 import com.gmail.robmadeyou.Screen;
 
@@ -23,5 +25,7 @@ public class Main {
 			//Refreshing the screen
 			Screen.refresh();
 		}
+		//Kills the process
+		Screen.destroy();
 	}
 }

@@ -5,12 +5,16 @@ import com.gmail.robmadeyou.Screen.GameType;
 import com.gmail.robmadeyou.Entity.Enemy;
 import com.gmail.robmadeyou.Entity.EntityList;
 import com.gmail.robmadeyou.Entity.Player;
+import com.gmail.robmadeyou.Input.Keyboard;
+import com.gmail.robmadeyou.Input.Mouse;
 
 public class EnemiesExamle {
 
 	public static void main(String[] args) {
 
-		Screen.create(640, 640, "Name", GameType.SIDE_SCROLLER, false);
+		Screen.setWorldBlockSizeInPixels(64);
+		Screen.setWorldDimensionsInBlocks(100, 100);
+		Screen.create(640, 640, "Enemy Example", GameType.SIDE_SCROLLER, false);
 		
 		Player player = new Player(40, 40, 32, 64);
 		EntityList.addEntity(player);
@@ -25,6 +29,9 @@ public class EnemiesExamle {
 		
 		Screen.setUpWorld();
 		while(!Screen.isAskedToClose()){
+			if(Keyboard.isKeyDown(Keyboard.Key.E)){
+				EntityList.addEntity(new Enemy(Mouse.getX(), Mouse.getY(), 20, 40));
+			}
 			Screen.update(60);
 			Screen.refresh();
 		}

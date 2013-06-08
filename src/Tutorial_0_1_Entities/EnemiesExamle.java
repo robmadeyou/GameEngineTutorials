@@ -24,7 +24,7 @@ public class EnemiesExamle {
 		 * enemy entity along with a player entity. By default the enemy will not
 		 * do anything
 		 */
-		Enemy enemy = new Enemy(40,40, 20, 40);
+		Enemy enemy = new Enemy(40, 40, 20, 40);
 		EntityList.addEntity(enemy);
 		
 		Screen.setUpWorld();

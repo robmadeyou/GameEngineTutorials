@@ -14,7 +14,7 @@ public class PlayerExample {
 		Screen.create(640, 640, "Name", GameType.SIDE_SCROLLER, false);
 		/*
 		 * This is new. We are creating a new Entity called Player. The new entity
-		 * is called player. Java is case sensetive so we are able to do this.
+		 * is called player. Java is case sensitive so we are able to do this.
 		 * 
 		 * after = new Player
 		 * 

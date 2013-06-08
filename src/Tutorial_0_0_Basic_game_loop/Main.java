@@ -1,8 +1,7 @@
 package Tutorial_0_0_Basic_game_loop;
 
-import org.lwjgl.Sys;
-
 import com.gmail.robmadeyou.Screen;
+import com.gmail.robmadeyou.Screen.GameType;
 
 //All code in Java is held in classes
 public class Main {
@@ -14,7 +13,7 @@ public class Main {
  	* being SIDE_SCROLLER, and in non minimalist mode (Minimilistic mode you set your own 
 	* OpenGL parameters, for more customization)
 		*/
-		Screen.create(800, 600, "Our Screen", Screen.GameType.SIDE_SCROLLER, false);
+		Screen.create(800, 600, "Our Screen", GameType.SIDE_SCROLLER, false);
 		/*A while statement to make sure the screen doesn’t just close after being created
 		* It’s going to repeat for ever while the boolean isAskedToClose() in the class Screen isn’t 
 		* true

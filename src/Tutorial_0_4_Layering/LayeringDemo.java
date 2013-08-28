@@ -1,12 +1,11 @@
 package Tutorial_0_4_Layering;
 
+import com.gmail.robmadeyou.Engine;
 import com.gmail.robmadeyou.Layer;
 import com.gmail.robmadeyou.Screen;
 import com.gmail.robmadeyou.Effects.Color;
 import com.gmail.robmadeyou.Effects.Emitter;
 import com.gmail.robmadeyou.Effects.TextureLoader;
-import com.gmail.robmadeyou.Entity.Enemy;
-import com.gmail.robmadeyou.Entity.EntityList;
 import com.gmail.robmadeyou.Entity.Player;
 import com.gmail.robmadeyou.Screen.GameType;
 
@@ -17,7 +16,7 @@ public class LayeringDemo {
 		Screen.create(640, 640, "AI_Demo", GameType.SIDE_SCROLLER, false);
 		
 		Player player = new Player(40, 40, 32, 64);
-		EntityList.addEntity(player);
+		Engine.addEntity(player);
 		/*
 		 * By default there are 2 layers at the start
 		 * 0 and 1. 
@@ -36,7 +35,7 @@ public class LayeringDemo {
 		int flame = TextureLoader.createTexture("flame.png");
 		
 		Emitter emitter = new Emitter(200, 600, 2000, 0.02f, 0.2f, 2, Color.White, flame);
-		Emitter.addNewEmitter(emitter);
+		Engine.addNewEmitter(emitter);
 		
 		
 		/*
@@ -46,10 +45,20 @@ public class LayeringDemo {
 		emitter.setCustomParticleHeight(20);
 		emitter.setCustomParticleWidth(20);
 		
+		/*
+		 * Right now the flame emitter is behind the player, if you remove the "//" from the two
+		 * lines of code under this, then you will see the flames now being rendered in front of the player.
+		 */
+		
+		//emitter.setLayer(2);
+		//Layer.addLayer();
+		
 		Screen.setUpWorld();
 		while(!Screen.isAskedToClose()){
 			Screen.update(60);
 			
+			emitter.setX(player.getX());
+			emitter.setY(player.getY());
 			
 			Screen.refresh();
 		}

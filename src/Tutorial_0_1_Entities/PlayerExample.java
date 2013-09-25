@@ -2,7 +2,7 @@ package Tutorial_0_1_Entities;
 
 import com.gmail.robmadeyou.Screen;
 import com.gmail.robmadeyou.Screen.GameType;
-import com.gmail.robmadeyou.Entity.EntityList;
+import com.gmail.robmadeyou.Engine;
 import com.gmail.robmadeyou.Entity.Player;
 
 public class PlayerExample {
@@ -27,7 +27,7 @@ public class PlayerExample {
 		 * using the class EntityList and the method addEntity, in the parameters of the method we name the entity we
 		 * would like to add, in this case we want to add player
 		 */
-		EntityList.addEntity(player);
+		Engine.addEntity(player);
 		/*
 		 * Now that the player is added to the screen, things will change but you won't be able to see anything. To 
 		 * view changes you must first set up the world. Remove the two forward slash lines ("//") on the line below
